@@ -40,7 +40,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="css/main.css">
+    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
 </head>
 <body>
     <header>
@@ -60,24 +61,120 @@
         <section class="padding">
             <div class="container">
                 <form id="sign-up" method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" class="sign-up">
-                    <label for="name">Name *</label>
-                    <input type="text" name="name" id="name">
-                    <br>
-                    <label for="username">Username *</label>
-                    <input type="text" name="username" id="username">
-                    <br>
-                    <label for="email">Email *</label>
-                    <input type="email" name="email" id="email">
-                    <br>
-                    <label for="password">Password *</label>
-                    <input type="text" name="password" id="password">
-                    <br>
-                    <!-- <label for="confirm-password">Confirm Password *</label>
-                    <input type="text" name="confirm-password" id="confirm-password"> -->
+                    <div class="input-sec">
+                        <h5>Contact Info</h5>
+                        <hr>
+                        <div class="inputs">
+                            <div class="form-input">
+                                <label for="name">Name *</label>
+                                <input type="text" name="name" id="name">
+                            </div>
+                            <div class="form-input">
+                                <label for="username">Username *</label>
+                                <input type="text" name="username" id="username">
+                            </div>
+                            <div class="form-input">
+                                <label for="email">Email *</label>
+                                <input type="email" name="email" id="email">
+                            </div>
+                            <div class="form-input">
+                                <label for="password">Password *</label>
+                                <input type="text" name="password" id="password">
+                            </div>
+                            <div class="form-input">
+                                <label for="confirm-password">Confirm Password *</label>
+                                <input type="text" name="confirm-password" id="confirm-password">
+                            </div>
+                            <div class="form-input">
+                                <label for="address">Street Address *</label>
+                                <input type="text" name="address" id="address">
+                            </div>
+                            <div class="form-input">
+                                <label for="confirm-password">State *</label>
+                                <select name="state" id="state">
+                                    <option value="AL">Alabama</option>
+                                    <option value="AK">Alaska</option>
+                                    <option value="AZ">Arizona</option>
+                                    <option value="AR">Arkansas</option>
+                                    <option value="CA">California</option>
+                                    <option value="CO">Colorado</option>
+                                    <option value="CT">Connecticut</option>
+                                    <option value="DE">Delaware</option>
+                                    <option value="DC">Dist of Columbia</option>
+                                    <option value="FL">Florida</option>
+                                    <option value="GA">Georgia</option>
+                                    <option value="HI">Hawaii</option>
+                                    <option value="ID">Idaho</option>
+                                    <option value="IL">Illinois</option>
+                                    <option value="IN">Indiana</option>
+                                    <option value="IA">Iowa</option>
+                                    <option value="KS">Kansas</option>
+                                    <option value="KY">Kentucky</option>
+                                    <option value="LA">Louisiana</option>
+                                    <option value="ME">Maine</option>
+                                    <option value="MD">Maryland</option>
+                                    <option value="MA">Massachusetts</option>
+                                    <option value="MI">Michigan</option>
+                                    <option value="MN">Minnesota</option>
+                                    <option value="MS">Mississippi</option>
+                                    <option value="MO">Missouri</option>
+                                    <option value="MT">Montana</option>
+                                    <option value="NE">Nebraska</option>
+                                    <option value="NV">Nevada</option>
+                                    <option value="NH">New Hampshire</option>
+                                    <option value="NJ">New Jersey</option>
+                                    <option value="NM">New Mexico</option>
+                                    <option value="NY">New York</option>
+                                    <option value="NC">North Carolina</option>
+                                    <option value="ND">North Dakota</option>
+                                    <option value="OH">Ohio</option>
+                                    <option value="OK">Oklahoma</option>
+                                    <option value="OR">Oregon</option>
+                                    <option value="PA">Pennsylvania</option>
+                                    <option value="RI">Rhode Island</option>
+                                    <option value="SC">South Carolina</option>
+                                    <option value="SD">South Dakota</option>
+                                    <option value="TN">Tennessee</option>
+                                    <option value="TX">Texas</option>
+                                    <option value="UT">Utah</option>
+                                    <option value="VT">Vermont</option>
+                                    <option value="VA">Virginia</option>
+                                    <option value="WA">Washington</option>
+                                    <option value="WV">West Virginia</option>
+                                    <option value="WI">Wisconsin</option>
+                                    <option value="WY">Wyoming</option>
+                                    
+                                </select>
+                                
+                            </div>
+                            <div class="form-input">
+                            <label for="address">City *</label>
+                                <input type="text" name="city" id="city">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- End of all the inputs -->
+                    <div class="notif-sec">
+                        <h5>Notification Preferences</h5>
+                        <hr>
+                        <div class="notifs">
+                            <input type="checkbox" id="bids" name="bids" value="Bid">
+                            <label for="vehicle1"> Receiving Bid Notifications</label><br>
+                            <input type="checkbox" id="offers" name="offers" value="Offers">
+                            <label for="vehicle2"> Receive Special Offers</label><br>
+                            <input type="checkbox" id="shipping" name="shipping" value="Shipping">
+                            <label for="vehicle3">Receive Shipping Updates</label><br>
+                        </div>
+                    </div>
+                    <!-- End of the notication -->
                     <input type="submit" value="Sign Up" id="Submit" class="button">
                 </form>
+                <!-- End of form -->
             </div>
+            <!-- End of container -->
         </section>
+        <!-- End of form section -->
     </main>
     <div class="clearfix"></div>
     <section class="padding contacts">

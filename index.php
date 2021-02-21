@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="css/main.css?v=1">
+    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
 </head>
 <body>
     <header>
@@ -72,11 +72,7 @@
             <div class="pic-section">
                 <img src="Images/banana.jpg" alt="">
                 <h5>Banana</h5>
-                <h5 class="bids">
-                    <script>
-
-                    </script>
-                </h5>
+                <h5 class="bids"></h5>
             </div>
             <div class="pic-section">
                 <img src="Images/keyboard.jpg" alt="">
@@ -105,7 +101,7 @@
     <section class="padding contacts">
         <div class="container box">
             <i class="fa fa-envelope" aria-hidden="true"></i>
-            <h4>Email us at aidanspel@hotmail.com</h4>
+            <h4>Email us at cashauctions@hotmail.com</h4>
         </div>
         <div class="container box">
             <i class="fab fa-facebook"></i>

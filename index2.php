@@ -13,7 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="css/main.css?v=1">
+    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
 </head>
 <body>
     <header>
@@ -23,7 +23,7 @@
                 <a href="">Home</a>
                 <a href="">Products</a>
                 <a href="">Cats</a>
-                <a href="log_in.php">Current Bids</a>
+                <a href="">Account</a>
                 <!-- <a href="connect.php">Sign Up</a> -->
             </nav>
             <!-- End of nav -->
@@ -70,7 +70,9 @@
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
             <div class="pic-section">
-                <img src="Images/banana.jpg" alt="">
+                <!-- <div class="pic"> -->
+                    <img src="Images/banana.jpg" alt="">
+                <!-- </div> -->
                 <h5>$1.99</h5>
             </div>
             <div class="pic-section">

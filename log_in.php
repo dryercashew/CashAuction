@@ -33,7 +33,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="css/main.css">
+    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
 </head>
 <body>
     <header>
@@ -46,20 +46,28 @@
                 <a href="">Log In</a>
                 <a href="connect.php">Sign Up</a>
             </nav>
-        </div>
+        </div> 
     </header> 
     <!-- End of Header -->
     <main>
         <section class="padding">
             <div class="container"> 
-                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" class="sign-up">
-                    <label for="username">Username *</label>
-                    <input type="text" name="username" id="username" required>
+                <form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" class="log-in">
+                    <h5>Login</h5>
+                    <hr>
+                    <!-- <label for="username">Username *</label> -->
+                    <input type="text" name="username" id="username" placeholder="Username" required>
                     <br>
-                    <label for="password">Password *</label>
-                    <input type="text" name="password" id="password" required>
+                    <!-- <label for="password">Password *</label> -->
+                    <input type="text" name="password" id="password" placeholder="Password" required>
                     <br>
+                    
                     <input type="submit" value="Submit" id="Submit" class="button">
+                    <br>
+                    <br>
+                    <a href="#">Forgot Password?</a>
+                    <br>
+                    
                 </form>
             </div>
         </section>

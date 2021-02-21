@@ -11,6 +11,8 @@ Style Sheet for Cashew Auctions
 
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 
+@import "log-in";
+
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 
 $main-color: #05a081;
@@ -83,10 +85,11 @@ nav {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-around;
+    font-size: 15px;
     a {
         text-decoration: none;
         color: #495057;
-        padding: 1em 2em;
+        padding: 1em 1em;
     }
 }
 .account {
@@ -147,9 +150,10 @@ main{
     padding-bottom: 20px;
     text-align: center;
     margin: 20px;
+    
     img {
-        height: 50px;
-        // display: block;
+        height: 100px;
+        margin: 10px;
     }
     h4 { 
         text-align: center;
@@ -179,10 +183,19 @@ footer {
     text-align: center;
 }
 // Sign-up portion
-.sign-up {
+#sign-up {
     padding-bottom: 4em;
     margin: auto;
-
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    .inputs {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2em;
+    }
+    .notif-sec {
+        margin: 0px 20px;
+    }
     input[type="text"], input[type="email"] {
         display: block;
         width: 100%;
@@ -193,6 +206,12 @@ footer {
         background-color: $text-color;
         background-clip: padding-box;
         border: 1px solid #ced4da;
+    }
+    #state {
+        width: 100%;
+        position: relative;
+        z-index: 10;
+        font-size: 1em;
     }
 }
 .button {
@@ -206,6 +225,7 @@ footer {
     border: 1px solid $main-color;
     cursor: pointer;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
+    width: 200px;
 }
 .button:hover {
     color: $main-color;

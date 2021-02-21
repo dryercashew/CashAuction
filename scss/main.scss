@@ -34,7 +34,7 @@ header {
     width: 100%;
     position: relative;
     background-color: $bg-color-2;
-    z-index: 5;
+    // z-index: 5;
 }
 .header {
     display: grid;
@@ -44,42 +44,21 @@ header {
     font-weight: bold;
     font-size: 3rem;
 }
-.banner{
-
-    background-color: $main-color;
-    width: 100%;
-    height: 30vh;
-    position: relative;
-}
-// banner grid
-.banner-text{
-    display: grid;
-    height: 100%;
-    width: 50%;
-    align-items: center;
-    text-align: center;
-    margin: auto;
-
-    // alternative
-    // position: absolute;
-    // top: 50%;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    // justify-content: center;
-}
-.banner-text-items{
-    color:$text-color;
-    z-index: 2;
+.slider{
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
 }
 // before
-.banner:before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-}
+// .banner:before{
+//     content: "";
+//     position: absolute;
+//     top: 0;
+//     left: 0;
+//     height: 100%;
+//     width: 100%;
+// }
 nav {
     text-align: center;
     display: grid;
@@ -101,43 +80,12 @@ nav {
         font-size: 5px;
     }
 }
-// Configuration of dropdown for nav
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-
-.dropdown:hover .dropdown-content{
-    display: block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-
-    a {
-        display: block;
-    }
-    a:hover {
-        background-color: #ddd;
-    }
-}
-// End of dropdown
 .padding{
     padding: 4rem 0;
 }
 // main-section
 main{
     background-color: $bg-color-2;
-}
-.main-grid{
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    grid-gap: 4rem;
 }
 .shop-pics {
     margin: auto;

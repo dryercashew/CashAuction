@@ -13,7 +13,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
+    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
+    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP>
 </head>
 <body>
     <header>
@@ -46,27 +47,18 @@
     </header> 
     <!-- End of Header -->
     <div class="banner">
-        <div class="banner-text">
-            <div class="banner-text-items">
-                <h2>Cashew Auctions</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eos quaerat quod nobis? Dolorum error amet dicta corporis? Numquam  error aliquid, nulla et.</p>
-            </div>
+        <div class="banner-text-items slider">
+            <img src="images/Banner/gal (1).jpg" alt="">
+            <img src="images/Banner/gal (1).png" alt="">
+            <img src="images/Banner/gal (2).jpeg" alt="">
+            <img src="images/Banner/gal (3).jpeg" alt="">
+            <img src="images/Banner/gal (4).jpeg" alt="">
         </div>
     </div> 
     <!-- banner -->
     <main class="padding">
-        <div class="container main-grid">
-            <div class="sideleft">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi delectus deserunt, molestiae placeat soluta et rem deleniti reprehenderit ipsa aliquid officia, est dolore maxime corrupti hic magnam quae culpa modi!
-                </p>
-            </div>
-            <div class=" container sideright">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi delectus deserunt, molestiae placeat soluta et rem deleniti reprehenderit ipsa aliquid officia, est dolore maxime corrupti hic magnam quae culpa modi!
-                </p>
-            </div>
-        </div>
+        <h3 class="text-center">AUCTION GALLERY</h3>
+        <hr>
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
             <div class="pic-section">
@@ -125,5 +117,15 @@
         </div>
     </footer>
     <script src="JS/editor.js"></script>
+    <script src="JS/jquery-3.5.1.js"> </script>
+    <script src="JS/jquery.cycle.all.js"></script>
+    <script>
+    $(function() {
+        $('.slider').cycle({
+            fx: 'scrollHorz'
+            // fx: 'fadeZoom'
+        });
+    });
+</script>
 </body>
 </html>

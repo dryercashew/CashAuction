@@ -46,54 +46,45 @@
     </header> 
     <!-- End of Header -->
     <div class="banner">
-        <div class="banner-text">
-            <div class="banner-text-items">
-                <h2>Cashew Auctions</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum eos quaerat quod nobis? Dolorum error amet dicta corporis? Numquam nihil fugiat delectus minus hic quisquam perferendis error aliquid, nulla et.</p>
-            </div>
+        <div class="banner-text-items slider">
+            <img src="images/Banner/gal (1).jpg" alt="">
+            <img src="images/Banner/gal (1).png" alt="">
+            <img src="images/Banner/gal (2).jpeg" alt="">
+            <img src="images/Banner/gal (3).jpeg" alt="">
+            <img src="images/Banner/gal (4).jpeg" alt="">
         </div>
     </div> 
     <!-- banner -->
     <main class="padding">
-        <div class="container main-grid">
-            <div class="sideleft">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi delectus deserunt, molestiae placeat soluta et rem deleniti reprehenderit ipsa aliquid officia, est dolore maxime corrupti hic magnam quae culpa modi!
-                </p>
-            </div>
-            <div class=" container sideright">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi delectus deserunt, molestiae placeat soluta et rem deleniti reprehenderit ipsa aliquid officia, est dolore maxime corrupti hic magnam quae culpa modi!
-                </p>
-            </div>
-        </div>
+        <!-- Pictures of products -->
+        <h3 class="text-center">AUCTION GALLERY</h3>
+        <hr>
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
             <div class="pic-section">
-                <!-- <div class="pic"> -->
-                    <img src="Images/banana.jpg" alt="">
-                <!-- </div> -->
-                <h5>$1.99</h5>
+                <img src="Images/banana.jpg" alt="">
+                <h5>Banana</h5>
+                <h5 class="bids"></h5>
             </div>
             <div class="pic-section">
                 <img src="Images/keyboard.jpg" alt="">
-                <h5>$39.99</h5>
+                <h5>Keyboard</h5>
             </div>
             <div class="pic-section">
                 <img src="Images/chess.jpg" alt="">
-                <h5>$45.99</h5>
+                <h5>Chess</h5>
             </div>
             <div class="pic-section">
                 <img src="Images/3080.jpg" alt="">
-                <h5>$699.99</h5>
+                <h5>RTX 3080</h5>
             </div>
             <div class="pic-section">
                 <img src="Images/basketball.jpg" alt="">
-                <h5>$22.99</h5>
+                <h5>Basketball</h5>
             </div>
             <div class="pic-section">
                 <img src="Images/xbox.jpg" alt="">
-                <h5>$149.99</h5>
+                <h5>Xbox 360</h5>
             </div>
         </div>
         <!-- End of pictures -->
@@ -126,5 +117,15 @@
         </div>
     </footer>
     <script src="JS/editor.js"></script>
+    <script src="JS/jquery-3.5.1.js"> </script>
+    <script src="JS/jquery.cycle.all.js"></script>
+    <script>
+    $(function() {
+        $('.slider').cycle({
+            fx: 'scrollHorz'
+            // fx: 'fadeZoom'
+        });
+    });
+</script>
 </body>
 </html>

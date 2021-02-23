@@ -13,8 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" href="bootstrap/dist/css/bootstrap.css">
-    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=3">
+    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP> -->
 </head>
 <body>
     <header>
@@ -22,7 +23,7 @@
             <div class="logo">LOGO</div>
             <nav>
                 <a href="">Home</a>
-                <a href="">Products</a>
+                <a href="products.php">Products</a>
                 <a href="">Cats</a>
                 <a href="log_in.php">Log In</a>
                 <a href="connect.php">Sign Up</a>
@@ -62,29 +63,40 @@
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
             <div class="pic-section">
-                <img src="Images/banana.jpg" alt="">
+                <img src="Images/Pics/banana.jpg" alt="">
                 <h5>Banana</h5>
+                <hr>
+                
                 <h5 class="bids"></h5>
             </div>
             <div class="pic-section">
-                <img src="Images/keyboard.jpg" alt="">
+                <img src="Images/Pics/keyboard.jpg" alt="">
                 <h5>Keyboard</h5>
+                <hr>
             </div>
             <div class="pic-section">
-                <img src="Images/chess.jpg" alt="">
+                <img src="Images/Pics/chess.jpg" alt="">
                 <h5>Chess</h5>
             </div>
             <div class="pic-section">
-                <img src="Images/3080.jpg" alt="">
+                <img src="Images/Pics/3080.jpg" alt="">
                 <h5>RTX 3080</h5>
             </div>
             <div class="pic-section">
-                <img src="Images/basketball.jpg" alt="">
+                <img src="Images/Pics/basketball.jpg" alt="">
                 <h5>Basketball</h5>
             </div>
             <div class="pic-section">
-                <img src="Images/xbox.jpg" alt="">
+                <img src="Images/Pics/xbox.jpg" alt="">
                 <h5>Xbox 360</h5>
+            </div>
+            <div class="pic-section">
+                <img src="Images/Pics/bottle.jfif" alt="">
+                <h5>Water Bottle</h5>
+            </div>
+            <div class="pic-section">
+                <img src="Images/Pics/bottle.jfif" alt="">
+                <h5>Water Bottle</h5>    
             </div>
         </div>
         <!-- End of pictures -->
@@ -113,7 +125,7 @@
             <br>
             <i class="far fa-copyright"></i>
 
-            Copyright aidanspel@hotmail.com. All Rights Reserve.
+            Copyright aidanspel@hotmail.com. All Rights Reserved.
         </div>
     </footer>
     <script src="JS/editor.js"></script>

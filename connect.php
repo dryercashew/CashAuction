@@ -4,6 +4,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") { 
         $con = mysqli_connect('localhost','root','','cashew-auction') or die("Unable to connect");
 
+        $id = rand(0,1000000);
         $name = $_POST['name'];
         $username = $_POST['username'];
         $email = $_POST['email'];
@@ -19,7 +20,7 @@
         }
 
         // Insert information into new row of database
-        $sql = "INSERT INTO information (ID, Name, Username, Email, Password) VALUES ('0', '$name', '$username', '$email', '$password')";
+        $sql = "INSERT INTO information (ID, Name, Username, Email, Password) VALUES ('$id', '$name', '$username', '$email', '$password')";
 
         $rs = mysqli_query($con, $sql);
         // Check that the data has been stored in the database
@@ -49,7 +50,7 @@
             <div class="logo">LOGO</div>
             <nav>
                 <a href="index.php">Home</a>
-                <a href="">Products</a>
+                <a href="products.php">Products</a>
                 <a href="">Cats</a>
                 <a href="log_in.php">Log In</a>
                 <a href="">Sign Up</a>

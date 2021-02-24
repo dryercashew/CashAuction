@@ -5,6 +5,8 @@
     if (!isset($_SESSION['userid'])) {
         $_SESSION['userid'] = '';
     }
+    $val = 'moo';
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +16,8 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=3">
-    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP> -->
+    <!-- <link rel="stylesheet" type="text/css" href="css/main.css?v=3"> -->
+    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP>
 </head>
 <body>
     <header>
@@ -32,7 +34,7 @@
             <div class="account">
                 <a href=""><img src="Images/user.svg" alt=""></a>
                 <p class="intro">
-                    <script type="text/javascript">
+                    <!-- <script type="text/javascript">
                         const name = '<?php echo $_SESSION['userid'] ?>';
                         if (!name) {
                             document.write('Welcome!');
@@ -40,7 +42,8 @@
                         else {
                             document.write('Welcome ' + name);
                         }
-                    </script>
+                        throw new Error();
+                    </script> -->
                 </p>
                 
             </div>
@@ -91,12 +94,48 @@
                 <h5>Xbox 360</h5>
             </div>
             <div class="pic-section">
-                <img src="Images/Pics/bottle.jfif" alt="">
-                <h5>Water Bottle</h5>
+                <?php 
+                    $val = "80711";
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                <hr>
+                <br>
+                <!-- <a href="">
+                    <script>
+                        const id = 
+                    </script>
+                </a> -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
             <div class="pic-section">
-                <img src="Images/Pics/bottle.jfif" alt="">
-                <h5>Water Bottle</h5>    
+                <?php 
+                    $val = "47211";
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                <hr>
+                <br>
+                <!-- <a href="">
+                    <script>
+                        const id = 
+                    </script>
+                </a> -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
         </div>
         <!-- End of pictures -->

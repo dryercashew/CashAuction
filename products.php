@@ -4,7 +4,7 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") { 
         $con = mysqli_connect('localhost','root','','cashew-auction') or die("Unable to connect");
 
-        $prod_id = rand(0, 100000);
+        $prod_id = rand(0, 10000000);
         $prod_name = $_POST['prod_name'];
         // $cur_bids = $_POST['cur_bids'];
         $seller = $_SESSION['userid'];

@@ -1,6 +1,7 @@
 <?php
     require_once "php/config.php";
     require_once "php/session.php";
+    require_once "php/getRandId.php";
     
     if (!isset($_SESSION['userid'])) {
         $_SESSION['userid'] = '';
@@ -26,7 +27,7 @@
             <nav>
                 <a href="">Home</a>
                 <a href="products.php">Products</a>
-                <a href="">Cats</a>
+                <a href="cat.php">Cats</a>
                 <a href="log_in.php">Log In</a>
                 <a href="connect.php">Sign Up</a>
             </nav>
@@ -66,47 +67,15 @@
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
             <div class="pic-section">
-                <img src="Images/Pics/banana.jpg" alt="">
-                <h5>Banana</h5>
-                <hr>
-                
-                <h5 class="bids"></h5>
-            </div>
-            <div class="pic-section">
-                <img src="Images/Pics/keyboard.jpg" alt="">
-                <h5>Keyboard</h5>
-                <hr>
-            </div>
-            <div class="pic-section">
-                <img src="Images/Pics/chess.jpg" alt="">
-                <h5>Chess</h5>
-            </div>
-            <div class="pic-section">
-                <img src="Images/Pics/3080.jpg" alt="">
-                <h5>RTX 3080</h5>
-            </div>
-            <div class="pic-section">
-                <img src="Images/Pics/basketball.jpg" alt="">
-                <h5>Basketball</h5>
-            </div>
-            <div class="pic-section">
-                <img src="Images/Pics/xbox.jpg" alt="">
-                <h5>Xbox 360</h5>
-            </div>
-            <div class="pic-section">
                 <?php 
-                    $val = "80711";
+                // Val changes which product information will be displayed 
+                    $val = $ar[0]['prod_id'];
                     include "php/getItem.php";
                 ?>
                 <img src="<?php echo $image ?>" alt="">
                 <p> <?php echo $name ?> </p>
-                <hr>
-                <br>
-                <!-- <a href="">
-                    <script>
-                        const id = 
-                    </script>
-                </a> -->
+                    <hr>
+                    <br>
                 <p style="color:blue">
                     <?php echo $price?> USD, 
                     <?php echo $bids ?> Bids
@@ -117,22 +86,136 @@
             </div>
             <div class="pic-section">
                 <?php 
-                    $val = "47211";
+                    $val = $ar[1]['prod_id'];
                     include "php/getItem.php";
                 ?>
                 <img src="<?php echo $image ?>" alt="">
                 <p> <?php echo $name ?> </p>
-                <hr>
-                <br>
-                <!-- <a href="">
-                    <script>
-                        const id = 
-                    </script>
-                </a> -->
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
                 <p style="color:blue">
                     <?php echo $price?> USD, 
                     <?php echo $bids ?> Bids
                 </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </div>
+            <div class="pic-section">
+                <?php 
+                    $val = $ar[2]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </div>
+            <div class="pic-section">
+                <?php 
+                    $val = $ar[3]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </div>
+            <div class="pic-section">
+                <?php 
+                    $val = $ar[4]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </div>
+            <!-- Pic section #6 -->
+            <div class="pic-section">
+                <?php 
+                    $val = $ar[5]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </div>
+            <!-- Pic section #7 -->
+            <div class="pic-section">
+                <?php 
+                    $val = $ar[6]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </div>
+            <!-- Pic section #8 -->
+            <div class="pic-section">
+                <?php 
+                    $val = $ar[7]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
                 <p>
                     Ends <?php echo $time ?>
                 </p>

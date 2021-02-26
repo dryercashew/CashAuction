@@ -17,8 +17,8 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <!-- <link rel="stylesheet" type="text/css" href="css/main.css?v=3"> -->
-    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP>
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=3">
+    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP> -->
 </head>
 <body>
     <header>
@@ -32,22 +32,6 @@
                 <a href="connect.php">Sign Up</a>
             </nav>
             <!-- End of nav -->
-            <div class="account">
-                <a href=""><img src="Images/user.svg" alt=""></a>
-                <p class="intro">
-                    <!-- <script type="text/javascript">
-                        const name = '<?php echo $_SESSION['userid'] ?>';
-                        if (!name) {
-                            document.write('Welcome!');
-                        }
-                        else {
-                            document.write('Welcome ' + name);
-                        }
-                        throw new Error();
-                    </script> -->
-                </p>
-                
-            </div>
         </div>
     </header> 
     <!-- End of Header -->

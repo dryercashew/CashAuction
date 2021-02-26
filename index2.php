@@ -1,6 +1,7 @@
 <?php
     require_once "php/config.php";
     require_once "php/session.php";
+    require_once "php/getRandId.php";
     
     if (!isset($_SESSION['userid'])) {
         $_SESSION['userid'] = '';
@@ -14,7 +15,7 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP> -->
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=2">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
 </head>
 <body>
     <header>
@@ -22,27 +23,34 @@
             <div class="logo">LOGO</div>
             <nav>
                 <a href="">Home</a>
-                <a href="products.php">Products</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <h4>Product Categories</h4>
+                        <div class="dropdown-content-a">
+                            <a href="Categories/tech.php">Technology</a>
+                            <a href="#">Art</a>
+                            <a href="#">Hobbies</a>
+                            <a href="#">Tools</a>
+                            <a href="#">Cars</a>
+                            <a href="#">Gardening</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="">Cats</a>
-                <a href="">Account</a>
-                <!-- <a href="connect.php">Sign Up</a> -->
+                <a href="account.php" id="intro">
+                    <script>
+                        const name = '<?php echo $_SESSION['userid']; ?>';
+                        document.getElementById("intro").innerHTML = "Hello, " + name;
+                    </script>
+                    <div class="account">
+                        Account Info
+                    </div>
+                </a>
             </nav>
             <!-- End of nav -->
-            <div class="account">
-                <a href=""><img src="Images/user.svg" alt=""></a>
-                <p class="intro">
-                    <script type="text/javascript">
-                        const name = '<?php echo $_SESSION['userid'] ?>';
-                        if (!name) {
-                            document.write('Welcome!');
-                        }
-                        else {
-                            document.write('Welcome ' + name);
-                        }
-                    </script>
-                </p>
-                
-            </div>
         </div>
     </header> 
     <!-- End of Header -->
@@ -62,44 +70,169 @@
         <hr>
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
+        <!-- <form action=""> -->
+            <button class="pic-section form-button" onclick="request_access(
+                <?php echo $ar[0]['prod_id']?>)">
+                <?php 
+                // Val changes which product information will be displayed 
+                    $val = $ar[0]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
+            </button>
+        <!-- </form> -->
+            
             <div class="pic-section">
-                <img src="Images/Pics/banana.jpg" alt="">
-                <h5>Banana</h5>
-                <h5 class="bids"></h5>
+                <?php 
+                    $val = $ar[1]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
             <div class="pic-section">
-                <img src="Images/Pics/keyboard.jpg" alt="">
-                <h5>Keyboard</h5>
+                <?php 
+                    $val = $ar[2]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
             <div class="pic-section">
-                <img src="Images/Pics/chess.jpg" alt="">
-                <h5>Chess</h5>
+                <?php 
+                    $val = $ar[3]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
             <div class="pic-section">
-                <img src="Images/Pics/3080.jpg" alt="">
-                <h5>RTX 3080</h5>
+                <?php 
+                    $val = $ar[4]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
+            <!-- Pic section #6 -->
             <div class="pic-section">
-                <img src="Images/Pics/basketball.jpg" alt="">
-                <h5>Basketball</h5>
+                <?php 
+                    $val = $ar[5]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
+            <!-- Pic section #7 -->
             <div class="pic-section">
-                <img src="Images/Pics/xbox.jpg" alt="">
-                <h5>Xbox 360</h5>
+                <?php 
+                    $val = $ar[6]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
+            <!-- Pic section #8 -->
             <div class="pic-section">
-                <img src="Images/Pics/bottle.jfif" alt="">
-                <h5>Water Bottle</h5>
-            </div>
-            <div class="pic-section">
-                <img src="Images/Pics/dog.jfif" alt="">
-                <h5>Golden Retriever</h5>
+                <?php 
+                    $val = $ar[7]['prod_id'];
+                    include "php/getItem.php";
+                ?>
+                <img src="<?php echo $image ?>" alt="">
+                <p> <?php echo $name ?> </p>
+                    <hr>
+                    <br>
+                <!-- Prints out the price -->
+                <p style="color:blue">
+                    <?php echo $price?> USD, 
+                    <?php echo $bids ?> Bids
+                </p>
+                <!-- Prints the time of expiration -->
+                <p>
+                    Ends <?php echo $time ?>
+                </p>
             </div>
         </div>
         <!-- End of pictures -->
     </main>
     <div class="clearfix"></div>
-    <section class="padding contacts">
+    <section class="contacts">
         <div class="container box">
             <i class="fa fa-envelope" aria-hidden="true"></i>
             <h4>Email us at aidanspel@hotmail.com</h4>
@@ -135,6 +268,18 @@
             // fx: 'fadeZoom'
         });
     });
-</script>
+
+    $(document).ready(function(){
+        $('.pic-section').click(function(){
+            var clickBtnValue = $(this).val();
+            var ajaxurl = 'items.php',
+            data =  {'action': clickBtnValue};
+            $.post(ajaxurl, data, function (response) {
+                // Response div goes here.
+                alert("action performed successfully");
+            });
+        });
+    });
+    </script>
 </body>
 </html>

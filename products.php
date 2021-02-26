@@ -60,21 +60,19 @@
             <div class="container header">
                 <div class="logo">LOGO</div>
                 <nav>
-                    <a href="index.php">Home</a>
-                    <a href="products.php">Products</a>
-                    <a href="">Cats</a>
-                    <!-- <a href="log_in.php">Log In</a>
-                    <a href="connect.php">Sign Up</a> -->
-                </nav>
-                <!-- End of nav -->
-                <div class="account">
-                    <a href=""><img src="Images/user.svg" alt=""></a>
-                    <p class="intro">
-                        <script type="text/javascript">
-                            const name = '<?php echo $_SESSION['userid'] ?>';
-                        </script>
-                    </p>
-                </div>
+                <a href="">Home</a>
+                <a href="products.php">Products</a>
+                <a href="">Cats</a>
+                <a href="account.php" id="intro">
+                    <script>
+                        const name = '<?php echo $_SESSION['userid']; ?>';
+                        document.getElementById("intro").innerHTML = "Hello, " + name;
+                    </script>
+                    <div class="account">
+                        Account Info
+                    </div>
+                </a>
+            </nav>
             </div>
         </header> 
         <!-- End of Header -->
@@ -90,10 +88,6 @@
                                     <label for="prod_name">Name of Product: *</label>
                                     <input type="text" name="prod_name" id="prod_name">
                                 </div>
-                                <!-- <div class="form-input">
-                                    <label for="seller">Name of Seller *</label>
-                                    <input type="text" name="seller" id="seller">
-                                </div> -->
                                 <div class="form-input">
                                     <input type="file" name="fileupload" value="fileupload" id="fileupload"> 
                                     <label for="fileupload"> Select a file to upload</label>
@@ -110,11 +104,11 @@
                                     <label for="prod_category">Category *</label>
                                     <select name="prod_category" id="prod_category">
                                         <option value="tech">Technology</option>
-                                        <option value="AK">Alaska</option>
-                                        <option value="AZ">Arizona</option>
-                                        <option value="AR">Arkansas</option>
-                                        <option value="CA">California</option>
-                                        <option value="CO">Colorado</option>
+                                        <option value="AK">Art</option>
+                                        <option value="AZ">Hobbies</option>
+                                        <option value="AR">Tools</option>
+                                        <option value="CA">Cars</option>
+                                        <option value="CO">Gardening</option>
                                     </select>
                                 </div>
                             </div>
@@ -132,7 +126,7 @@
                                 <label for="vehicle3">Receive Shipping Updates</label><br>
                             </div>
                         </div>
-                        <input type="submit" value="Sign Up" id="Submit" class="button">
+                        <input type="submit" value="Submit" id="Submit" class="button">
                     </form>
                 </div>
             </section>

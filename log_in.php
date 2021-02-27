@@ -33,7 +33,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
+    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
 </head>
 <body>
     <header>
@@ -59,7 +60,7 @@
                     <input type="text" name="username" id="username" placeholder="Username" required>
                     <br>
                     <!-- <label for="password">Password *</label> -->
-                    <input type="text" name="password" id="password" placeholder="Password" required>
+                    <input type="password" name="password" id="password" placeholder="Password" required>
                     <br>
                     
                     <input type="submit" value="Submit" id="Submit" class="button">

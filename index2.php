@@ -70,9 +70,9 @@
         <hr>
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
-        <!-- <form action=""> -->
-            <button class="pic-section form-button" onclick="request_access(
-                <?php echo $ar[0]['prod_id']?>)">
+        <form action="items.php" method="POST">
+            <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[0]['prod_id']; ?>>
+            
                 <?php 
                 // Val changes which product information will be displayed 
                     $val = $ar[0]['prod_id'];
@@ -90,7 +90,8 @@
                     Ends <?php echo $time ?>
                 </p>
             </button>
-        <!-- </form> -->
+            
+        </form>
             
             <div class="pic-section">
                 <?php 
@@ -269,17 +270,6 @@
         });
     });
 
-    $(document).ready(function(){
-        $('.pic-section').click(function(){
-            var clickBtnValue = $(this).val();
-            var ajaxurl = 'items.php',
-            data =  {'action': clickBtnValue};
-            $.post(ajaxurl, data, function (response) {
-                // Response div goes here.
-                alert("action performed successfully");
-            });
-        });
-    });
     </script>
 </body>
 </html>

@@ -89,6 +89,13 @@
                         <p>Your current items being auctioned</p>
                     </div>
                 </button>
+                <button class="info-sec" onclick="document.location='products.php'">
+                    <i class="fas fa-gift"></i>
+                    <div class="info-text">
+                        <h5>Sell Item</h5>
+                        <p>Auction off one of your items</p>
+                    </div>
+                </button>
                 <button class="info-sec">
                     <i class="fas fa-address-book"></i>
                     <div class="info-text">

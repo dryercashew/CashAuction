@@ -20,7 +20,9 @@
 <body>
     <header>
         <div class="container header">
-            <div class="logo">LOGO</div>
+            <div class="logo">
+                <img src="Images/cashew.png" alt="">
+            </div>
             <nav>
                 <a href="">Home</a>
                 <div class="dropdown">
@@ -70,165 +72,166 @@
         <hr>
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
-        <form action="items.php" method="POST">
-            <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[0]['prod_id']; ?>>
-            
-                <?php 
-                // Val changes which product information will be displayed 
-                    $val = $ar[0]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </button>
-            
-        </form>
-            
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[1]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[2]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[3]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[4]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
-            <!-- Pic section #6 -->
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[5]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
-            <!-- Pic section #7 -->
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[6]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
-            <!-- Pic section #8 -->
-            <div class="pic-section">
-                <?php 
-                    $val = $ar[7]['prod_id'];
-                    include "php/getItem.php";
-                ?>
-                <img src="<?php echo $image ?>" alt="">
-                <p> <?php echo $name ?> </p>
-                    <hr>
-                    <br>
-                <!-- Prints out the price -->
-                <p style="color:blue">
-                    <?php echo $price?> USD, 
-                    <?php echo $bids ?> Bids
-                </p>
-                <!-- Prints the time of expiration -->
-                <p>
-                    Ends <?php echo $time ?>
-                </p>
-            </div>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[0]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[0]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[1]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[1]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form> 
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[2]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[2]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[3]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[3]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[4]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[4]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[5]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[5]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[6]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[6]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
+            <form action="items.php" method="POST">
+                <button class="pic-section form-button" type="submit" name="item" value = <?php echo $ar[7]['prod_id']; ?>>
+                    <?php 
+                    // Val changes which product information will be displayed 
+                        $val = $ar[7]['prod_id'];
+                        include "php/getItem.php";
+                    ?>
+                    <img src="<?php echo $image ?>" alt="">
+                    <p> <?php echo $name ?> </p>
+                        <hr>
+                        <br>
+                    <p style="color:blue">
+                        <?php echo $price?> USD, 
+                        <?php echo $bids ?> Bids
+                    </p>
+                    <p>
+                        Ends <?php echo $time ?>
+                    </p>
+                </button>
+            </form>
         </div>
         <!-- End of pictures -->
     </main>

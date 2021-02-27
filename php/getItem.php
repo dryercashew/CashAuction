@@ -21,6 +21,7 @@
     $bids = $row['cur_bids'];
     $price = $row['price'];
     $time = $row['expire_date'];
+    $seller = $row['seller'];
 
 ?>
 

@@ -23,7 +23,7 @@
 <body>
     <header>
         <div class="container header">
-            <div class="logo">LOGO</div>
+            <img src="Images/cashew.png" alt="">
             <nav>
                 <a href="index2.php">Home</a>
                 <div class="dropdown">

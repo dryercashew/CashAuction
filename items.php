@@ -1,10 +1,9 @@
 <?php
-    // echo "Monkey boys";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
-        // echo "Gangnam";
         $val = $_POST['item'];
         include "php/getItem.php";
+        include "php/getSeller.php";
     }
 ?>
 
@@ -15,7 +14,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP> -->
     <link rel="stylesheet" type="text/css" href="css/main.css?v=5">
 </head>
     <body?>
@@ -62,19 +60,27 @@
                 <div class="selling-sec">
                     <div class="item-pic">
                         <img src="<?php echo $image ?>" alt="">
-                        <h6 style="text-align:center">Contact</h6>
                         
                     </div>
                     <div class="item-info">
-                        <h5>Young money</h5>
+                        <h5><?php echo $addr ?></h5>
+                        <h5><?php echo $city.', '.$state.', '.$zip ?></h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsa quis in quibusdam repellat fugit natus, est debitis quam sint?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quidem commodi facere velit modi obcaecati eius dolorum, distinctio quo cumque?</p>
                     </div>
                     <div class="bid-button">
-                        <button class="button">Submit Bid</button>
-                        <br>
-                        <br>
-                        <h6 >Current Price: <?php echo "$".$price ?></h6>
+                        <div class="item-price">
+                            <h5 style="text-align:center">Product Information</h5>
+                            <h6>Product ID: <?php echo $prod_id ?></h6>
+                            <hr>
+                            <h6>Current Price: <?php echo "$".$price ?></h6>
+                            <hr>
+                            <h6>Number of Bids: <?php echo $bids ?></h6>
+                            <hr>
+                            <h6>Seller: <?php echo $fname." ".$lname ?></h6>
+
+                        </div>
+                        
                     </div>
                 </div>
             </section>

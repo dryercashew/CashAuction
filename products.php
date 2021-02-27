@@ -11,7 +11,7 @@
         $price = $_POST['price'];
         $image = $_FILES["fileupload"]["name"];
         $tempname = $_FILES["fileupload"]["tmp_name"];
-            $folder = "Images/"."Pics/".$image; 
+        $folder = "Images/"."Pics/".$image; 
         $expire_date = $_POST['expire_date'];
         $prod_category = $_POST['prod_category'];
 

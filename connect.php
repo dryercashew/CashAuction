@@ -5,10 +5,16 @@
         $con = mysqli_connect('localhost','root','','cashew-auction') or die("Unable to connect");
 
         $id = rand(0,1000000);
-        $name = $_POST['name'];
+        $fname = $_POST['fname'];
+        $lname = $_POST['lname'];
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
+        $address = $_POST['address'];
+        $zip = $_POST['zip'];
+        $phone = $_POST['phone'];
+        $state = $_POST['state'];
+        $city = $_POST['city'];
 
         // Check to see if the username is already taken
         $sql = "SELECT * FROM information WHERE username = '$username'";
@@ -20,7 +26,7 @@
         }
 
         // Insert information into new row of database
-        $sql = "INSERT INTO information (ID, Name, Username, Email, Password) VALUES ('$id', '$name', '$username', '$email', '$password')";
+        $sql = "INSERT INTO `information`(`ID`, `fname`, `lname`, `username`, `email`, `pass`, `addr`, `zip`, `phone`, `state`, `city`) VALUES ('$id', '$fname', '$lname', '$username', '$email', '$password', '$address', '$zip', '$phone', '$state', '$city')";
 
         $rs = mysqli_query($con, $sql);
         // Check that the data has been stored in the database
@@ -41,17 +47,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP>
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
 </head>
 <body>
     <header>
         <div class="container header">
-            <div class="logo">LOGO</div>
+            <img src="Images/cashew.png" alt="">
             <nav>
                 <a href="index.php">Home</a>
-                <a href="products.php">Products</a>
-                <a href="">Cats</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <h4>Product Categories</h4>
+                        <div class="dropdown-content-a">
+                            <a href="Categories/tech.php">Technology</a>
+                            <a href="#">Art</a>
+                            <a href="#">Hobbies</a>
+                            <a href="#">Tools</a>
+                            <a href="#">Cars</a>
+                            <a href="#">Gardening</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="log_in.php">Log In</a>
                 <a href="">Sign Up</a>
             </nav>
@@ -67,32 +87,44 @@
                         <hr>
                         <div class="inputs">
                             <div class="form-input">
-                                <label for="name">Name *</label>
-                                <input type="text" name="name" id="name">
+                                <label for="fname">First Name *</label>
+                                <input type="text" name="fname" id="fname" placeholder="First Name" required>
+                            </div>
+                            <div class="form-input">
+                                <label for="lname">Last Name *</label>
+                                <input type="text" name="lname" id="lname" placeholder="Last Name" required>
                             </div>
                             <div class="form-input">
                                 <label for="username">Username *</label>
-                                <input type="text" name="username" id="username">
+                                <input type="text" name="username" id="username" placeholder="Username" required>
                             </div>
                             <div class="form-input">
                                 <label for="email">Email *</label>
-                                <input type="email" name="email" id="email">
+                                <input type="email" name="email" id="email" placeholder="Email" required>
                             </div>
                             <div class="form-input">
                                 <label for="password">Password *</label>
-                                <input type="text" name="password" id="password">
+                                <input type="password" name="password" id="password" placeholder="Password" required autocomplete>
                             </div>
                             <div class="form-input">
-                                <label for="confirm-password">Confirm Password *</label>
-                                <input type="text" name="confirm-password" id="confirm-password">
+                                <label for="conPass">Confirm Password *</label>
+                                <input type="password" name="conPass" id="conPass" placeholder="Confirm Password" required autocomplete>
                             </div>
                             <div class="form-input">
                                 <label for="address">Street Address *</label>
-                                <input type="text" name="address" id="address">
+                                <input type="text" name="address" id="address" placeholder="Address" required>
+                            </div>
+                            <div class="form-input">
+                                <label for="zip">Zip *</label>
+                                <input type="text" name="zip" id="zip" placeholder="Zip" required>
+                            </div>
+                            <div class="form-input">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" placeholder="425-415-6782" required>
                             </div>
                             <div class="form-input">
                                 <label for="confirm-password">State *</label>
-                                <select name="state" id="state">
+                                <select name="state" id="state" required>
                                     <option value="AL">Alabama</option>
                                     <option value="AK">Alaska</option>
                                     <option value="AZ">Arizona</option>
@@ -149,8 +181,8 @@
                                 
                             </div>
                             <div class="form-input">
-                            <label for="address">City *</label>
-                                <input type="text" name="city" id="city">
+                                <label for="city">City *</label>
+                                <input type="text" name="city" id="city" placeholder="City" required>
                             </div>
                         </div>
                     </div>
@@ -177,6 +209,7 @@
             <!-- End of container -->
         </section>
         <!-- End of form section -->
+        
     </main>
     <div class="clearfix"></div>
     <section class="padding contacts">

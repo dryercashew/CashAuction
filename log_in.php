@@ -7,7 +7,7 @@
         $password = $_POST['password'];
 
         // Get password from database for given username
-        $sql = "SELECT password FROM information WHERE username = '$username'";
+        $sql = "SELECT pass FROM information WHERE username = '$username'";
 
         $n = mysqli_query($con, $sql);
         $row = mysqli_fetch_array($n, MYSQLI_ASSOC);
@@ -15,7 +15,7 @@
         if (!$row) {
             echo "No Username with this name";
         }
-        else if ($password == $row['password']) {
+        else if ($password == $row['pass']) {
             $_SESSION["userid"] = $username;
             header('Location: index2.php');
         }
@@ -39,11 +39,25 @@
 <body>
     <header>
         <div class="container header">
-            <div class="logo">LOGO</div>
+            <img src="Images/cashew.png" alt="">
             <nav>
                 <a href="index.php">Home</a>
-                <a href="">Products</a>
-                <a href="">Cats</a>
+                <div class="dropdown">
+                    <button class="dropbtn">Categories
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                    <div class="dropdown-content">
+                        <h4>Product Categories</h4>
+                        <div class="dropdown-content-a">
+                            <a href="Categories/tech.php">Technology</a>
+                            <a href="#">Art</a>
+                            <a href="#">Hobbies</a>
+                            <a href="#">Tools</a>
+                            <a href="#">Cars</a>
+                            <a href="#">Gardening</a>
+                        </div>
+                    </div>
+                </div>
                 <a href="">Log In</a>
                 <a href="connect.php">Sign Up</a>
             </nav>

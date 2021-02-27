@@ -9815,6 +9815,11 @@ Style Sheet for Cashew Auctions
   width: 100%;
 }
 
+.item-price {
+  background-color: #d3d3d3;
+  padding: 20px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9963,7 +9968,7 @@ footer {
   margin: 0px 20px;
 }
 
-#sign-up input[type="text"], #sign-up input[type="email"], #sign-up input[type="password"] {
+#sign-up input[type="text"], #sign-up input[type="email"], #sign-up input[type="password"], #sign-up input[type="tel"] {
   display: block;
   width: 100%;
   padding: .375rem .75rem;

@@ -22,13 +22,14 @@ $bg-color-2: #eee;
 .title {
     background-color: $main-color;
     color: $text-color;
-    padding: 10px;
+    padding: 20px;
     margin: 10px 0px;
 }
 .selling-sec {
     display: grid;
     grid-template-columns: 1fr 4fr 2fr;
     grid-gap: 1em;
+    padding: 10px;
 }
 .item-pic {
     img {
@@ -36,6 +37,23 @@ $bg-color-2: #eee;
     }
 }
 .item-price {
-    background-color: $bg-color;
+    background-color: $bg-color-2;
     padding: 20px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
+}
+.bid {
+    margin-right: 20px;
+}
+.bid-submit {
+    padding: 5px 20px;
+    background-color: $main-color;
+    color: $text-color;
+    border: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .6);
+}
+.bid-submit:hover {
+    background-color: $text-color;
+    color: $main-color;
 }

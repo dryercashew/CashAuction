@@ -14,7 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=5">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=6">
 </head>
     <body?>
         <header>
@@ -55,7 +55,7 @@
         <main>
             <section class="bid-sec container">
                 <div class="title">
-                    <h5>ONLINE AUCTION - <?php echo $name ?></h5>
+                        <h5>ONLINE AUCTION - <?php echo $name ?></h5>
                 </div>
                 <div class="selling-sec">
                     <div class="item-pic">
@@ -67,6 +67,16 @@
                         <h5><?php echo $city.', '.$state.', '.$zip ?></h5>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ipsa quis in quibusdam repellat fugit natus, est debitis quam sint?</p>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quidem commodi facere velit modi obcaecati eius dolorum, distinctio quo cumque?</p>
+                        <div class="contact-seller">
+                            <h5>Contact Seller</h5>
+                            <p>Email: <?php echo $email ?></p>
+                            <p>Phone Number: <?php echo $phone ?></p>
+                        </div>
+                        <form action="" method="POST">
+                            <label for="bid" class="bid">Enter your bid:</label>
+                            <input type="number" name="bid" id="bid" placeholder="$">
+                            <input type="submit" value="Place Bid" id="Submit" class="bid-submit">
+                        </form>
                     </div>
                     <div class="bid-button">
                         <div class="item-price">
@@ -78,9 +88,9 @@
                             <h6>Number of Bids: <?php echo $bids ?></h6>
                             <hr>
                             <h6>Seller: <?php echo $fname." ".$lname ?></h6>
-
-                        </div>
-                        
+                            <hr>
+                            <h6>Ends on: <?php echo $time ?></h6>
+                        </div>  
                     </div>
                 </div>
             </section>

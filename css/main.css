@@ -9801,7 +9801,7 @@ Style Sheet for Cashew Auctions
 .title {
   background-color: #05a081;
   color: #fff;
-  padding: 10px;
+  padding: 20px;
   margin: 10px 0px;
 }
 
@@ -9809,6 +9809,7 @@ Style Sheet for Cashew Auctions
   display: grid;
   grid-template-columns: 1fr 4fr 2fr;
   grid-gap: 1em;
+  padding: 10px;
 }
 
 .item-pic img {
@@ -9816,8 +9817,28 @@ Style Sheet for Cashew Auctions
 }
 
 .item-price {
-  background-color: #d3d3d3;
+  background-color: #eee;
   padding: 20px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.bid {
+  margin-right: 20px;
+}
+
+.bid-submit {
+  padding: 5px 20px;
+  background-color: #05a081;
+  color: #fff;
+  border: none;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.6);
+}
+
+.bid-submit:hover {
+  background-color: #fff;
+  color: #05a081;
 }
 
 * {

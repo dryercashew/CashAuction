@@ -239,7 +239,7 @@
     <section class="contacts">
         <div class="container box">
             <i class="fa fa-envelope" aria-hidden="true"></i>
-            <h4>Email us at aidanspel@hotmail.com</h4>
+            <h4>Email us at cashauctions@hotmail.com</h4>
         </div>
         <div class="container box">
             <i class="fab fa-facebook"></i>
@@ -259,7 +259,7 @@
             <br>
             <i class="far fa-copyright"></i>
 
-            Copyright aidanspel@hotmail.com. All Rights Reserved.
+            Copyright cashauctions@hotmail.com. All Rights Reserved.
         </div>
     </footer>
     <script src="JS/editor.js"></script>

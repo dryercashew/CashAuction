@@ -1,0 +1,21 @@
+/*
+Style Sheet for Cashew Auctions
+* version: 4.0
+* last modified: 1.22.2021
+* author: Aidan Spelman
+* email: aidanspel@hotmail.com
+* website: Cashew Auctions
+*/
+
+$main-color: #05a081;
+$text-color: #fff;
+$bg-color: #d3d3d3;
+$bg-color-2: #eee;
+
+.newMainBid {
+    text-align: center;
+    background-color: $text-color;
+    img {
+        width: 300px;
+    }
+}

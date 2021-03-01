@@ -245,7 +245,7 @@
             <br>
             <i class="far fa-copyright"></i>
 
-            Copyright aidanspel@hotmail.com. All Rights Reserved.
+            Copyright cashauctions@hotmail.com. All Rights Reserved.
         </div>
     </footer>
     <script src="JS/editor.js"></script>

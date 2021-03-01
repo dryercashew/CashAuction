@@ -25,7 +25,7 @@
         }
 
         // Insert information into new row of database
-        $sql = "INSERT INTO products (prod_id, prod_name, cur_bids, seller, price, image, expire_date, prod_category) VALUES ('$prod_id', '$prod_name', '0', '$seller', '$price', '$image', '$expire_date', '$prod_category')";
+        $sql = "INSERT INTO products (prod_id, prod_name, cur_bids, seller, price, image, expire_date, prod_category, buyer_id) VALUES ('$prod_id', '$prod_name', '0', '$seller', '$price', '$image', '$expire_date', '$prod_category', '$seller')";
 
         $rs = mysqli_query($con, $sql);
         // Check that the data has been stored in the database
@@ -58,7 +58,7 @@
     <body>
         <header>
             <div class="container header">
-                <div class="logo">LOGO</div>
+                <img src="Images/cashew.png" alt="">
                 <nav>
                     <a href="index2.php">Home</a>
                     <div class="dropdown">

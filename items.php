@@ -1,4 +1,5 @@
 <?php
+    require_once "php/session.php";
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $val = $_POST['item'];
@@ -14,12 +15,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=6">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=7">
 </head>
     <body?>
         <header>
             <div class="container header">
-                <div class="logo">LOGO</div>
+                <div class="logo">
+                    <img src="Images/cashew.png" alt="">
+                </div>
                 <nav>
                     <a href="index2.php">Home</a>
                     <div class="dropdown">
@@ -51,7 +54,7 @@
                 </nav>
                 <!-- End of nav -->
             </div>
-        </header>
+        </header> 
         <main>
             <section class="bid-sec container">
                 <div class="title">
@@ -72,11 +75,14 @@
                             <p>Email: <?php echo $email ?></p>
                             <p>Phone Number: <?php echo $phone ?></p>
                         </div>
-                        <form action="" method="POST">
-                            <label for="bid" class="bid">Enter your bid:</label>
+                        <form action="currentBids.php" method="POST" class="mybids">
+                            <label for="bid" class="bid" >Enter your bid:</label>
                             <input type="number" name="bid" id="bid" placeholder="$">
-                            <input type="submit" value="Place Bid" id="Submit" class="bid-submit">
+                            <input type="number" name="curBid" value="<?php echo $price ?>" hidden="TRUE">
+                            <input type="number" name="val" value="<?php echo $val ?>" hidden="TRUE">
+                            <button type="submit" value="<?php echo $val ?>" id="Submit" class="bid-submit">Place Bid</button>
                         </form>
+                        <div class="feedback"></div>
                     </div>
                     <div class="bid-button">
                         <div class="item-price">
@@ -95,5 +101,6 @@
                 </div>
             </section>
         </main>
+        <script src="JS/checkBid.js"></script>
     </body>
 </html> 

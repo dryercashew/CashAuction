@@ -9841,6 +9841,23 @@ Style Sheet for Cashew Auctions
   color: #05a081;
 }
 
+/*
+Style Sheet for Cashew Auctions
+* version: 4.0
+* last modified: 1.22.2021
+* author: Aidan Spelman
+* email: aidanspel@hotmail.com
+* website: Cashew Auctions
+*/
+.newMainBid {
+  text-align: center;
+  background-color: #fff;
+}
+
+.newMainBid img {
+  width: 300px;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -9960,6 +9977,7 @@ main {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   text-align: center;
+  padding: 10px;
 }
 
 .contacts img {
@@ -10025,4 +10043,9 @@ footer {
 .button:hover {
   color: #05a081;
   background-color: #fff;
+}
+
+.feedback {
+  color: blue;
+  padding: 20px;
 }

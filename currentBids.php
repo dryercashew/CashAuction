@@ -5,15 +5,19 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $val = $_POST['val'];
         $bid = $_POST['bid'];
+        // echo $bid;
+        $myUsername = $_SESSION['userid']; 
+        echo $myUsername;
+
 
         include "php/getItem.php";
+        $curBids = $bids + 1;  
 
         $con = new mysqli('localhost','root','','cashew-auction') or die("Unable to connect");
 
 
-        $sql = "UPDATE 'products' SET 'prod_id"=[];
+        $sql = "UPDATE products SET buyer_id = '$myUsername', cur_bids = '$curBids', price='$bid' WHERE prod_id = '$prod_id'" ;
         $rs = mysqli_query($con, $sql);
-
 
     }
 ?>

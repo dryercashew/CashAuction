@@ -11,12 +11,15 @@ Style Sheet for Cashew Auctions
 
 @import "../node_modules/@fortawesome/fontawesome-free/scss/regular.scss";
 
+@import "../node_modules/mdb-ui-kit/css/mdb.min.css";
+
 // Importing some of the other scss files
 @import "log-in";
 @import "account";
 @import "dropdown";
 @import "itemSell";
 @import "newBid";
+@import "table";
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 
@@ -207,4 +210,27 @@ footer {
 .feedback {
     color: blue;
     padding: 20px;
+}
+
+@media (max-width: 650px) {
+    .contacts {
+        grid-template-columns: 1fr;
+    }
+    .shop-pics {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .shop-pics {
+        grid-template-columns: repeat(2, 1fr);
+        margin: auto;
+    }
+    .banner {
+        width: 500px;
+        height:300px;
+        margin: 80px auto;
+        position: relative;
+        z-index: -1;
+    }
 }

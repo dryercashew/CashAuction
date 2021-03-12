@@ -2,7 +2,7 @@
     require_once "php/config.php";
     require_once "php/session.php";
     if ($_SERVER["REQUEST_METHOD"] == "POST") { 
-        $con = mysqli_connect('localhost','root','','cashew-auction') or die("Unable to connect");
+        $con = mysqli_connect(DBSERVER, DBUSERNAME, DBPASSWORD, DBNAME) or die("Unable to connect");
 
         $id = rand(0,1000000);
         $fname = $_POST['fname'];
@@ -51,32 +51,7 @@
     <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
 </head>
 <body>
-    <header>
-        <div class="container header">
-            <img src="Images/cashew.png" alt="">
-            <nav>
-                <a href="index.php">Home</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Categories
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <h4>Product Categories</h4>
-                        <div class="dropdown-content-a">
-                            <a href="Categories/tech.php">Technology</a>
-                            <a href="#">Art</a>
-                            <a href="#">Hobbies</a>
-                            <a href="#">Tools</a>
-                            <a href="#">Cars</a>
-                            <a href="#">Gardening</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="log_in.php">Log In</a>
-                <a href="">Sign Up</a>
-            </nav>
-        </div>
-    </header> 
+    <?php include("include/headerNonAuth.php") ?> 
     <!-- End of Header -->
     <main>
         <section class="padding">

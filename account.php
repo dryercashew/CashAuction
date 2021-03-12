@@ -17,51 +17,18 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=8">
     <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP> -->
 </head>
 <body>
-    <header>
-        <div class="container header">
-            <img src="Images/cashew.png" alt="">
-            <nav>
-                <a href="index2.php">Home</a>
-                <div class="dropdown">
-                    <button class="dropbtn">Categories
-                        <i class="fa fa-caret-down"></i>
-                    </button>
-                    <div class="dropdown-content">
-                        <h4>Product Categories</h4>
-                        <div class="dropdown-content-a">
-                            <a href="#">Technology</a>
-                            <a href="#">Art</a>
-                            <a href="#">Hobbies</a>
-                            <a href="#">Tools</a>
-                            <a href="#">Cars</a>
-                            <a href="#">Gardening</a>
-                        </div>
-                    </div>
-                </div>
-                <a href="cat.php">Cats</a>
-                <a href="account.php" id="intro">
-                    <script>
-                        const name = '<?php echo $_SESSION['userid']; ?>';
-                        document.getElementById("intro").innerHTML = "Hello, " + name;
-                    </script>
-                    <div class="account">
-                        Account Info
-                    </div>
-                </a>
-            </nav>
-            <!-- End of nav -->
-        </div>
-    </header> 
+
+    <?php include("include/headerAuth.php") ?>
     <!-- End of Header -->  
     <main class="account">
         <div class="padding container">
             <h3 class="text-center">Account Information</h3>
             <div class="info">
-                <button class="info-sec">
+                <button class="info-sec" onclick="document.location='myBids.php'">
                     <i class="fas fa-box-open"></i>
                     <div class="info-text">
                         <h5>Your Bids</h5>

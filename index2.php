@@ -15,7 +15,7 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP> -->
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=10">
 </head>
 <body>
     <?php include("include/headerAuth.php") ?>
@@ -226,9 +226,9 @@
             Copyright cashauctions@hotmail.com. All Rights Reserved.
         </div>
     </footer>
-    <script src="JS/editor.js"></script>
     <script src="JS/jquery-3.5.1.js"> </script>
     <script src="JS/jquery.cycle.all.js"></script>
+    <script src="JS/pageloader.js"></script>
     <script>
     $(function() {
         $('.slider').cycle({
@@ -238,5 +238,6 @@
     });
 
     </script>
+
 </body>
 </html>

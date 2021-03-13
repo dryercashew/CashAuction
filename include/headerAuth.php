@@ -1,3 +1,6 @@
+<div id="loadingDiv">
+    <div class="loader spinner"></div>
+</div>
 <header>
     <div class="container header">
         <div class="logo">

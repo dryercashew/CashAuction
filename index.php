@@ -17,8 +17,7 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=8">
-    <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"> <PHP> -->
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=10">
 </head>
 <body>
     <?php include("include/headerNonAuth.php") ?>
@@ -222,16 +221,11 @@
             Copyright cashauctions@hotmail.com. All Rights Reserved.
         </div>
     </footer>
-    <script src="JS/editor.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="JS/pageloader.js"></script>
     <script src="JS/jquery-3.5.1.js"> </script>
     <script src="JS/jquery.cycle.all.js"></script>
-    <script>
-    $(function() {
-        $('.slider').cycle({
-            fx: 'scrollHorz'
-            // fx: 'fadeZoom'
-        });
-    });
-</script>
+    
+    
 </body>
 </html>

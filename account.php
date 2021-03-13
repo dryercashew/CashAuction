@@ -107,7 +107,8 @@
             Copyright aidanspel@hotmail.com. All Rights Reserved.
         </div>
     </footer>
-    <script src="JS/editor.js"></script>
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="JS/pageloader.js"></script>
     <script src="JS/jquery-3.5.1.js"> </script>
     <script src="JS/jquery.cycle.all.js"></script>
     <script>

@@ -20,6 +20,7 @@ Style Sheet for Cashew Auctions
 @import "itemSell";
 @import "newBid";
 @import "table";
+@import "pageloader";
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600&display=swap');
 
@@ -232,5 +233,8 @@ footer {
         margin: 80px auto;
         position: relative;
         z-index: -1;
+    }
+    #sign-up {
+        grid-template-columns: 1fr;
     }
 }

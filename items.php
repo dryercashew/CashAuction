@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=8">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=9">
 </head>
     <body?>
         <?php include("include/headerAuth.php") ?>

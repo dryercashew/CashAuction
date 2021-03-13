@@ -7,8 +7,6 @@
         $bid = $_POST['bid'];
         // echo $bid;
         $myUsername = $_SESSION['userid']; 
-        echo $myUsername;
-
 
         include "php/getItem.php";
         $curBids = $bids + 1;  
@@ -38,5 +36,9 @@
         <img src="<?php echo $image ?>" alt="">
         <p>Please periodically check your email for updates</p>
     </main>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="JS/pageloader.js"></script>
+    
 </body>
 </html> 

@@ -89,5 +89,9 @@
             Copyright aidanspel@hotmail.com. All Rights Reserve.
         </div>
     </footer>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="JS/pageloader.js"></script>
+
 </body>
 </html>

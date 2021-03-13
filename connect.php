@@ -48,7 +48,7 @@
     <title>Cashew Auctions</title>
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <!-- <PHP> <link rel="stylesheet" type="text/css" href="css/main.css"></head> <PHP> -->
-    <link rel="stylesheet" type="text/css" href="css/main.css?v=4">
+    <link rel="stylesheet" type="text/css" href="css/main.css?v=9">
 </head>
 <body>
     <?php include("include/headerNonAuth.php") ?> 
@@ -209,5 +209,9 @@
         </div>
     </footer>
     <script src="JS/form.js"></script>
+
+    <script src="node_modules/jquery/dist/jquery.js"></script>
+    <script src="JS/pageloader.js"></script>
+
 </body>
 </html>

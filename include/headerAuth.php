@@ -15,12 +15,12 @@
                 <div class="dropdown-content">
                     <h4>Product Categories</h4>
                     <div class="dropdown-content-a">
-                        <a href="Categories/tech.php">Technology</a>
-                        <a href="#">Art</a>
-                        <a href="#">Hobbies</a>
-                        <a href="#">Tools</a>
-                        <a href="#">Cars</a>
-                        <a href="#">Gardening</a>
+                        <a href="tech.php">Technology</a>
+                        <a href="art.php">Art</a>
+                        <a href="hobbies.php">Hobbies</a>
+                        <a href="tools.php">Tools</a>
+                        <a href="cars.php">Cars</a>
+                        <a href="garden.php">Gardening</a>
                     </div>
                 </div>
             </div>

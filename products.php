@@ -86,11 +86,11 @@
                                     <label for="prod_category">Category *</label>
                                     <select name="prod_category" id="prod_category">
                                         <option value="tech">Technology</option>
-                                        <option value="AK">Art</option>
-                                        <option value="AZ">Hobbies</option>
-                                        <option value="AR">Tools</option>
-                                        <option value="CA">Cars</option>
-                                        <option value="CO">Gardening</option>
+                                        <option value="art">Art</option>
+                                        <option value="hobbies">Hobbies</option>
+                                        <option value="tools">Tools</option>
+                                        <option value="cars">Cars</option>
+                                        <option value="garden">Gardening</option>
                                     </select>
                                 </div>
                             </div>

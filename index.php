@@ -18,6 +18,9 @@
     <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="css/main.css?v=10">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+    
+    
 </head>
 <body>
     <?php include("include/headerNonAuth.php") ?>
@@ -35,13 +38,17 @@
         <hr>
         <!-- Pictures of products -->
         <div class="container padding shop-pics">
-            <div class="pic-section">
+            <div class="pic-section gallery">
                 <?php 
                 // Val changes which product information will be displayed 
                     $val = $ar[0]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery-item">
+                    <a href="<?php echo $image ?>" data-lightbox="gallery">
+                        <img src="<?php echo $image ?>" alt="">
+                    </a>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -58,7 +65,15 @@
                     $val = $ar[1]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
+                
+                
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -77,7 +92,13 @@
                     $val = $ar[2]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -96,7 +117,13 @@
                     $val = $ar[3]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -115,7 +142,13 @@
                     $val = $ar[4]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -135,7 +168,13 @@
                     $val = $ar[5]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -155,7 +194,13 @@
                     $val = $ar[6]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -175,7 +220,13 @@
                     $val = $ar[7]['prod_id'];
                     include "php/getItem.php";
                 ?>
-                <img src="<?php echo $image ?>" alt="">
+                <div class="gallery">
+                    <div class="gallery-item">
+                        <a href="<?php echo $image ?>" data-lightbox="gallery">
+                            <img src="<?php echo $image ?>" alt="">
+                        </a>
+                    </div>
+                </div>
                 <p> <?php echo $name ?> </p>
                     <hr>
                     <br>
@@ -190,14 +241,14 @@
                 </p>
             </div>
         </div>
-        <!-- End of pictures -->
     </main>
     <div class="clearfix"></div>
     
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="JS/jquery-3.5.1.js"> </script>
     <script src="JS/jquery.cycle.all.js"></script>
     <script src="JS/pageloader.js"></script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.js"></script>
     <script>
     $(function() {
         $('.slider').cycle({
@@ -206,6 +257,11 @@
         });
     });
 
+    $(document).ready(() => {
+        baguetteBox.run('.gallery', {
+            animation: 'fadeIn'
+        });
+    });
     </script>
     
     

@@ -115,28 +115,8 @@
         </main>
             
         <div class="clearfix"></div>
-        <section class="padding contacts">
-        <div class="container box">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
-            <h4>Email us at cashauctions@hotmail.com</h4>
-        </div>
-        <div class="container box">
-            <i class="fab fa-facebook"></i>
-            <h4>Follow us on Facebook</h4>
-        </div>
-        <div class="container box">
-            <i class="fab fa-instagram"></i>
-            <h4>Follow us on Instagram</h4>
-        </div>
-    </section>
-    <footer>
-        <div class="container padding">
-            <i class="far fa-copyright"></i>
-
-            Copyright aidanspel@hotmail.com. All Rights Reserved.
-        </div>
-    </footer>
-
+        <?php include("include/footer.php") ?>
+        
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="JS/pageloader.js"></script>
     </body>

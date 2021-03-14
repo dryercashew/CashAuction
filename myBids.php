@@ -45,7 +45,9 @@
                 <?php } ?>
             </table>
         </div>
-    </main>  
+    </main> 
+    <?php include("include/footer.php") ?>
+
     <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="JS/pageloader.js"></script>
     </body>
